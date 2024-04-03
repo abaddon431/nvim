@@ -1,3 +1,3 @@
 Work station config
 
-All config files are **heavilty influenced by theprimeagen**
+All config files are **heavily *influenced* by theprimeagen**
