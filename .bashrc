@@ -25,7 +25,7 @@ declare clr="\[\033[00m\]"
 
 
 git_branch () {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/git:(\1)/'
 }
 
 if [ "$color_prompt" = yes ]; then
@@ -33,3 +33,6 @@ if [ "$color_prompt" = yes ]; then
 else
 	PS1='[\u@h \W] $(git_branch)\$ '
 fi
+
+
+bind -x '"\C-f": "tmux new ~/.local/bin/tmux-fzf-start"'
