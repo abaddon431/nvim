@@ -35,4 +35,5 @@ else
 fi
 
 
-bind -x '"\C-f": "tmux new ~/.local/bin/tmux-fzf-start"'
+bind -x '"\C-f": "~/.local/bin/tmux-fzf-start"'
+#bind -x '"\C-f": "tmux new ~/.local/bin/tmux-fzf-start"'
