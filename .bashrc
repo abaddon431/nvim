@@ -7,6 +7,8 @@
 
 color_prompt=yes
 alias ls='ls --color=auto'
+alias s='source venv/bin/activate'
+alias zzz='poweroff'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 alias vim="nvim"
@@ -34,6 +36,13 @@ else
 	PS1='[\u@h \W] $(git_branch)\$ '
 fi
 
+gg() {
+  local custom_host=$1
+  shift  # Shift the first argument (hostname) out of the way
+  local repo_url=$1
+  local new_url="git@${custom_host}:${repo_url#git@github.com:}"
+  git clone "$new_url"
+}
 
 bind -x '"\C-f": "~/.local/bin/tmux-fzf-start"'
 #bind -x '"\C-f": "tmux new ~/.local/bin/tmux-fzf-start"'
