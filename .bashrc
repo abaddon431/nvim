@@ -43,6 +43,13 @@ gg() {
   local new_url="git@${custom_host}:${repo_url#git@github.com:}"
   git clone "$new_url"
 }
+gra(){
 
+  local custom_host=$1
+  shift  # Shift the first argument (hostname) out of the way
+  local repo_url=$1
+  local new_url="git@${custom_host}:${repo_url#git@github.com:}"
+  git remote add origin "$new_url"
+}
 bind -x '"\C-f": "~/.local/bin/tmux-fzf-start"'
 #bind -x '"\C-f": "tmux new ~/.local/bin/tmux-fzf-start"'
