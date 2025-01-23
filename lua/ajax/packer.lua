@@ -49,5 +49,5 @@ return require('packer').startup(function(use)
   }
 
   use ('theprimeagen/vim-be-good')
-
+  use ('nvim-treesitter/nvim-treesitter-context')
 end)
