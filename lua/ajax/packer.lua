@@ -50,4 +50,5 @@ return require('packer').startup(function(use)
 
   use ('theprimeagen/vim-be-good')
   use ('nvim-treesitter/nvim-treesitter-context')
+  use ({'stevearc/conform.nvim', config = function() require('conform').setup() end})
 end)
