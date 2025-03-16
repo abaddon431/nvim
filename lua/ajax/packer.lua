@@ -53,4 +53,25 @@ return require('packer').startup(function(use)
   use ({'stevearc/conform.nvim', config = function() require('conform').setup() end})
   use ('windwp/nvim-ts-autotag')
   use ('olrtg/nvim-emmet')
+    -- Required plugins
+  use 'stevearc/dressing.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use 'MunifTanjim/nui.nvim'
+  use 'MeanderingProgrammer/render-markdown.nvim'
+
+  -- Optional dependencies
+  use 'hrsh7th/nvim-cmp'
+  use 'nvim-tree/nvim-web-devicons' -- or use 'echasnovski/mini.icons'
+  use 'HakonHarnes/img-clip.nvim'
+  use 'zbirenbaum/copilot.lua'
+
+  -- Avante.nvim with build process
+  use {
+    'yetone/avante.nvim',
+    branch = 'main',
+    run = 'make',
+    config = function()
+      require('avante').setup()
+    end
+  }
 end)
