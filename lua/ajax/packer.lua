@@ -63,15 +63,12 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'nvim-tree/nvim-web-devicons' -- or use 'echasnovski/mini.icons'
   use 'HakonHarnes/img-clip.nvim'
-  use 'zbirenbaum/copilot.lua'
 
-  -- Avante.nvim with build process
   use {
-    'yetone/avante.nvim',
-    branch = 'main',
-    run = 'make',
+    "jonroosevelt/gemini-cli",
     config = function()
-      require('avante').setup()
-    end
+      require("gemini").setup()
+    end,
   }
+
 end)
