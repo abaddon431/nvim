@@ -65,4 +65,5 @@ return require('packer').startup(function(use)
   use 'HakonHarnes/img-clip.nvim'
   use 'mfussenegger/nvim-dap'
   use 'mfussenegger/nvim-dap-python'
+
 end)

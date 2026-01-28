@@ -31,3 +31,6 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
+
+vim.keymap.set('v', '<Leader>s',  ":SSSelected" )
+vim.opt.clipboard = "unnamedplus"
