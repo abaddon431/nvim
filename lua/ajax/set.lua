@@ -34,3 +34,6 @@ vim.g.mapleader = " "
 
 vim.keymap.set('v', '<Leader>s',  ":SSSelected" )
 vim.opt.clipboard = "unnamedplus"
+vim.keymap.set('n', '<C-/>', 'gcc', { remap = true, desc = "Toggle comment" })
+vim.keymap.set('v', '<C-/>', 'gc', { remap = true, desc = "Toggle comment" })
+
